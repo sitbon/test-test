@@ -25,9 +25,6 @@ pytestmark = pytest.mark.parametrize(
 )
 
 
-def test_fibonacci_iterative(n, expected):
-    assert fib.fibonacci_iterative(n) == expected
-
-
-def test_fibonacci_recursive(n, expected):
-    assert fib.fibonacci_recursive(n) == expected
+@pytest.mark.parametrize("fibonacci_function", [fib.fibonacci_iterative, fib.fibonacci_recursive])
+def test_fibonacci(fibonacci_function, n, expected):
+    assert fibonacci_function(n) == expected
