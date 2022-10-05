@@ -1,5 +1,7 @@
-#!/bin/sh -e
-poetry run black --check .
-poetry run flake8 .
-poetry run mypy .
-poetry run python -m pytest -v -x
+#!/bin/sh -xe
+# shellcheck disable=SC2086 # We want word splitting here
+CHECK_PARAMS='app/ tests/'
+poetry run black --check $CHECK_PARAMS
+poetry run flake8 $CHECK_PARAMS
+poetry run mypy $CHECK_PARAMS
+poetry run python -m pytest -v
