@@ -21,6 +21,7 @@ pytestmark = pytest.mark.parametrize(
         (12, 144),
         (13, 233),
         pytest.param(14, 420, marks=pytest.mark.xfail),
+        (14, 377),
     ],
 )
 
