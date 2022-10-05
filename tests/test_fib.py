@@ -2,6 +2,7 @@ import pytest
 
 from app import fib
 
+
 pytestmark = pytest.mark.parametrize(
     "n, expected",
     [
