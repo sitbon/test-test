@@ -2,5 +2,5 @@
 """
 
 
-def print_hi(name):
-    print(f"Hi, {name}")
+def print_hi(name1, name2):
+    print(f"Hi, {name1} & {name2}!")
