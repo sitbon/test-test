@@ -1,5 +1,5 @@
 #!/bin/sh -e
-black --check .
-flake8 .
-mypy .
+poetry run black --check .
+poetry run flake8 .
+poetry run mypy .
 poetry run python -m pytest -v -x
