@@ -1,3 +1,6 @@
+[![](https://img.shields.io/github/last-commit/sitbon/test-test?color=blue)](
+     https://github.com/sitbon/test-test/commits/main)
+
 # Testing Tests
 
 Project for showcasing pytest features.
