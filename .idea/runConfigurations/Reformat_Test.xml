@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Reformat&amp;Test" type="CompoundRunConfigurationType">
+    <toRun name="TestsWithCoverage" type="PythonConfigurationType" />
+    <toRun name="Reformat" type="ShConfigurationType" />
+    <method v="2" />
+  </configuration>
+</component>
