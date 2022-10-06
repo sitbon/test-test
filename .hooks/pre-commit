@@ -2,6 +2,6 @@
 # shellcheck disable=SC2086 # We want word splitting here
 CHECK_PARAMS='app/ tests/'
 poetry run black --check $CHECK_PARAMS
-poetry run flake8 $CHECK_PARAMS
+poetry run flake8 --max-line-length=88 $CHECK_PARAMS
 poetry run mypy $CHECK_PARAMS
 poetry run python -m pytest -v
