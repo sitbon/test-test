@@ -32,6 +32,9 @@ def test_fizzbuzz_single(n, expected):
     assert fizzbuzz.fizzbuzz(n) == expected
 
 
-@pytest.mark.parametrize("n", list(range(len(fizzbuzz_test_data))))
-def test_fizzbuzz_list(n):
-    assert fizzbuzz.fizzbuzz_list(n + 1) == [i[1] for i in fizzbuzz_test_data[: n + 1]]
+@pytest.mark.parametrize("n", list(range(1, len(fizzbuzz_test_data) + 1)))
+@pytest.mark.parametrize(
+    "fizzbuzz_list_fn", [fizzbuzz.fizzbuzz_list, fizzbuzz.fizzbuzz_list_short]
+)
+def test_fizzbuzz_list(fizzbuzz_list_fn, n):
+    assert fizzbuzz_list_fn(n) == [i[1] for i in fizzbuzz_test_data[:n]]
