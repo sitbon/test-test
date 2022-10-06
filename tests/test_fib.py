@@ -20,8 +20,13 @@ pytestmark = pytest.mark.parametrize(
         (11, 89),
         (12, 144),
         (13, 233),
-        pytest.param(14, 420, marks=pytest.mark.xfail),
+        pytest.param(
+            14, 420, marks=pytest.mark.xfail(reason="wrong result", strict=True)
+        ),
         (14, 377),
+        pytest.param(
+            -1, 0, marks=pytest.mark.xfail(reason="negative n not allowed", strict=True)
+        ),
     ],
 )
 
