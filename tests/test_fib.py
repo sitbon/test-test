@@ -40,7 +40,11 @@ pytestmark = pytest.mark.parametrize(
 
 
 @pytest.mark.parametrize(
-    "fibonacci_function", [fib.fibonacci_iterative, fib.fibonacci_recursive]
+    "fibonacci_function",
+    [
+        fib.fibonacci_iterative,
+        pytest.param(fib.fibonacci_recursive, marks=pytest.mark.slow),
+    ],
 )
 def test_fibonacci(fibonacci_function, n, expected):
     assert fibonacci_function(n) == expected
