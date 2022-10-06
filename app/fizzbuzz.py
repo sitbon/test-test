@@ -1,4 +1,4 @@
-def fizzbuzz(n):
+def fizzbuzz(n: int) -> str:
     """Return the nth fizzbuzz number"""
     if n % 15 == 0:
         return "FizzBuzz"
@@ -10,12 +10,12 @@ def fizzbuzz(n):
         return str(n)
 
 
-def fizzbuzz_list(n):
+def fizzbuzz_list(n: int) -> list[str]:
     """Return a list of the first n fizzbuzz numbers"""
     return [fizzbuzz(i) for i in range(1, n + 1)]
 
 
-def fizzbuzz_list_short(n):
+def fizzbuzz_list_short(n: int) -> list[str]:
     return list(
         map(
             lambda i: f"{'Fizz' * (not i % 3)}{'Buzz' * (not i % 5)}" or str(i),
